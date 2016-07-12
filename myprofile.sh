@@ -32,6 +32,18 @@ alias rs='bin/rails server'
 alias rc='bin/rails console'
 alias rt='bin/rails test'
 
+function findstring() {
+  if [ $# -eq 0 ]; then
+      echo "Usage: findstring <string> [format]"
+  else
+    if [ -z "$2" ]; then
+        grep -rnwi . -e "$1"
+    else
+      grep --include=\*.$2 -rnwi . -e "$1"
+    fi
+  fi
+}
+
 # Bind F1 to fg for toggling between Vim and CL
 # (requires zsh)
 bind-F1-to-fg () {
