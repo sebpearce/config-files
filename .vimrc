@@ -87,3 +87,6 @@ nnoremap <Leader>p :CtrlPMixed<CR>
 " Combine with F1 mapped to fg in terminal to toggle
 map <F1> <C-z>
 
+" Tabs
+nmap <Left> gT
+nmap <Right> gt
