@@ -88,5 +88,6 @@ nnoremap <Leader>p :CtrlPMixed<CR>
 map <F1> <C-z>
 
 " Tabs
-nmap <Left> gT
-nmap <Right> gt
+nmap <S-Left> gT
+nmap <S-Right> gt
+nmap <S-Up> :tabe<CR>
