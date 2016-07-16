@@ -83,6 +83,7 @@ nnoremap <Leader>w :w!<CR>
 nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>x :x!<CR>
 nnoremap <Leader>p :CtrlPMixed<CR>
+nnoremap <Leader>e :Explore<CR>
 
 " Combine with F1 mapped to fg in terminal to toggle
 map <F1> <C-z>
