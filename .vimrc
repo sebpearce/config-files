@@ -74,6 +74,9 @@ set splitright
 nnoremap j gj
 nnoremap k gk
 
+" Use \\ to insert line above and move to it while in insert mode
+imap \\ <Esc>ko
+
 " Easier than <S-;>
 nnoremap , :
 
