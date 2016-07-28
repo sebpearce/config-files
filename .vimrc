@@ -10,7 +10,7 @@ set tabstop=2
 set expandtab
 set clipboard=unnamed
 set number
-set relativenumber
+" set relativenumber
 set numberwidth=4
 set noswapfile
 set t_Co=256
@@ -20,8 +20,9 @@ set background=dark
 set laststatus=2
 set backspace=indent,eol,start
 set timeoutlen=1000 ttimeoutlen=0 " Fix lag when ESC key is pressed to exit insert mode
-" set cursorline
-highlight LineNr ctermbg=black
+set cursorline
+hi LineNr ctermbg=black
+hi CursorLine ctermbg=235
 
 " Use the_silver_searcher with ack.vim:
 let g:ackprg = 'ag --nogroup --nocolor --column'
