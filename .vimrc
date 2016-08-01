@@ -27,7 +27,7 @@ hi CursorLine ctermbg=233
 " Use the_silver_searcher with ack.vim:
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" Change cursor shape between insert and normal mode in iTerm2.app
+" change cursor shape between insert and normal mode in iTerm2.app
 " if $TERM_PROGRAM =~ "iTerm"
 "     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
 "     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
@@ -57,6 +57,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'mileszs/ack.vim'
+Plugin 'mattn/emmet-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
