@@ -10,7 +10,7 @@ set tabstop=2
 set expandtab
 set clipboard=unnamed
 set number
-" set relativenumber
+set relativenumber
 set numberwidth=4
 set noswapfile
 set t_Co=256
