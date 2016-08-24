@@ -58,8 +58,12 @@ Plugin 'tmhedberg/matchit'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'mileszs/ack.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" NERDTree settings
+let NERDTreeShowHidden=1
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -95,6 +99,7 @@ nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>x :x!<CR>
 nnoremap <Leader>p :CtrlPMixed<CR>
 nnoremap <Leader>e :Explore<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " Combine with F1 mapped to fg in terminal to toggle
 map <F1> <C-z>
