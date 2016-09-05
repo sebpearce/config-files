@@ -108,3 +108,11 @@ map <F1> <C-z>
 nmap <S-Left> gT
 nmap <S-Right> gt
 nmap <S-Up> :tabe<CR>
+
+" duplicate selection
+vmap <Leader>d y'>p
+
+" append semicolon to end of line
+map <kMinus> <Esc>g_a;<Esc>
+
+
