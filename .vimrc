@@ -44,11 +44,13 @@ runtime macros/matchit.vim
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ervandew/supertab'
 " Plugin 'xenoterracide/html.vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-haml'
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-haml'
 " Plugin 'tpope/vim-markdown'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'elmcast/elm-vim'
+Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/tComment'
 Plugin 'auto-pairs-gentle'
@@ -64,8 +66,14 @@ Plugin 'mattn/emmet-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Ignore elm in polyglot plugin
+let g:polyglot_disabled = ['elm']
+
+" Ignore mappings in elmcast/elm-vim plugin
+let g:elm_setup_keybindings = 0
+
 " NERDTree settings
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 
 " RSpec.vim mappings
 map <Leader>t :w <bar> :call RunCurrentSpecFile()<CR>
