@@ -24,6 +24,8 @@ set cursorline
 hi LineNr ctermbg=black
 hi CursorLine ctermbg=233
 
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+
 " Use the_silver_searcher with ack.vim:
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -53,12 +55,12 @@ Plugin 'auto-pairs-gentle'
 Plugin 'kien/ctrlp.vim'
 Plugin 'matze/vim-move'
 Plugin 'chriskempson/base16-vim'
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'mileszs/ack.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -66,7 +68,7 @@ filetype plugin indent on    " required
 let NERDTreeShowHidden=1
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>t :w <bar> :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
