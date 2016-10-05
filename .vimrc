@@ -125,4 +125,5 @@ vmap <Leader>d y'>p
 " append semicolon to end of line
 map <kMinus> <Esc>g_a;<Esc>
 
-
+" copy current filename to system clipboard
+noremap <silent> <F4> :let @+=expand("%:p")<CR>
