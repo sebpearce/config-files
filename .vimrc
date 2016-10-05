@@ -64,6 +64,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'mattn/emmet-vim'
 " Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
+filetype off
 filetype plugin indent on    " required
 
 " Ignore elm in polyglot plugin
