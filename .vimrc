@@ -73,6 +73,9 @@ let g:polyglot_disabled = ['elm']
 " Ignore mappings in elmcast/elm-vim plugin
 let g:elm_setup_keybindings = 0
 
+" Hide .DS_Store in netrw
+let g:netrw_list_hide = '.DS_Store'
+
 " NERDTree settings
 " let NERDTreeShowHidden=1
 
