@@ -8,31 +8,57 @@ if [ "${TERM%%-*}" = 'linux' ]; then
     return 2>/dev/null || exit 0
 fi
 
-color00="0/0/0" # Base 00 - Black
-color01="ff/5d/61" # Base 08 - Red
-color02="77/cc/77" # Base 0B - Green
-color03="ff/cc/66" # Base 0A - Yellow
-color04="7d/b0/d4" # Base 0D - Blue
-color05="cc/99/cc" # Base 0E - Magenta
-color06="66/cc/cc" # Base 0C - Cyan
-color07="d3/d0/c8" # Base 05 - White
-color08="74/73/69" # Base 03 - Bright Black
+color00="18/18/18" # Base 00 - Black
+color01="ab/46/42" # Base 08 - Red
+color02="a1/b5/6c" # Base 0B - Green
+color03="f7/ca/88" # Base 0A - Yellow
+color04="7c/af/c2" # Base 0D - Blue
+color05="ba/8b/af" # Base 0E - Magenta
+color06="86/c1/b9" # Base 0C - Cyan
+color07="d8/d8/d8" # Base 05 - White
+color08="58/58/58" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="f2/f0/ec" # Base 07 - Bright White
-color16="f9/91/57" # Base 09
-color17="d2/7b/53" # Base 0F
-color18="39/39/39" # Base 01
-color19="51/51/51" # Base 02
-color20="a0/9f/93" # Base 04
-color21="e8/e6/df" # Base 06
-color_foreground="d3/d0/c8" # Base 05
-color_background="2d/2d/2d" # Base 00
-color_cursor="ff/ff/ff" # Base 05
+color15="f8/f8/f8" # Base 07 - Bright White
+color16="dc/96/56" # Base 09
+color17="a1/69/46" # Base 0F
+color18="28/28/28" # Base 01
+color19="38/38/38" # Base 02
+color20="b8/b8/b8" # Base 04
+color21="e8/e8/e8" # Base 06
+color_foreground="d8/d8/d8" # Base 05
+color_background="18/18/18" # Base 00
+color_cursor="d8/d8/d8" # Base 05
+
+# color00="0/0/0" # Base 00 - Black
+# color01="ff/5d/61" # Base 08 - Red
+# color02="77/cc/77" # Base 0B - Green
+# color03="ff/cc/66" # Base 0A - Yellow
+# color04="7d/b0/d4" # Base 0D - Blue
+# color05="cc/99/cc" # Base 0E - Magenta
+# color06="66/cc/cc" # Base 0C - Cyan
+# color07="d3/d0/c8" # Base 05 - White
+# color08="74/73/69" # Base 03 - Bright Black
+# color09=$color01 # Base 08 - Bright Red
+# color10=$color02 # Base 0B - Bright Green
+# color11=$color03 # Base 0A - Bright Yellow
+# color12=$color04 # Base 0D - Bright Blue
+# color13=$color05 # Base 0E - Bright Magenta
+# color14=$color06 # Base 0C - Bright Cyan
+# color15="f2/f0/ec" # Base 07 - Bright White
+# color16="f9/91/57" # Base 09
+# color17="d2/7b/53" # Base 0F
+# color18="39/39/39" # Base 01
+# color19="51/51/51" # Base 02
+# color20="a0/9f/93" # Base 04
+# color21="e8/e6/df" # Base 06
+# color_foreground="d3/d0/c8" # Base 05
+# color_background="2d/2d/2d" # Base 00
+# color_cursor="ff/ff/ff" # Base 05
 
 if [ -n "$TMUX" ]; then
   # tell tmux to pass the escape sequences through
