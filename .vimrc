@@ -4,7 +4,7 @@ syntax on
 set visualbell
 set history=10000
 set mouse=a
-set scrolloff=10
+set scrolloff=5
 set shiftwidth=2
 set tabstop=2
 set expandtab
@@ -98,8 +98,8 @@ set splitbelow
 set splitright
 
 " Don't skip over wrapped lines
-nnoremap j gj
-nnoremap k gk
+" nnoremap j gj
+" nnoremap k gk
 
 " Use \\ to insert line above and move to it while in insert mode
 imap \\ <Esc>ko
