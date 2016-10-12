@@ -110,7 +110,7 @@ nnoremap , :
 " Leader mappings
 map <Space> <Leader>
 nnoremap <Leader>w :w!<CR>
-nnoremap <Leader>q :q!<CR>
+nnoremap <Leader>q :bd<CR>
 nnoremap <Leader>x :x!<CR>
 nnoremap <Leader>p :CtrlPMixed<CR>
 nnoremap <Leader>e :Explore<CR>
