@@ -2,33 +2,42 @@
 https://github.com/dmac/dotfiles/blob/master/.slate
 http://thume.ca/howto/2012/11/19/using-slate/
 
-config defaultToCurrentScreen true
-
 # Prefix for all commands
 alias prefix ctrl;cmd
+alias shift-prefix ctrl;cmd;shift
 
 # Screens
 alias laptop    0
 alias bigscreen 1
 
-alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
-alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
-alias tophalf       move screenOriginX;screenOriginY                  screenSizeX;screenSizeY/2
-alias bottomhalf    move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX;screenSizeY/2
-alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
-alias rightmost     move screenOriginX+screenSizeX*0.4;screenOriginY  screenSizeX*0.6;screenSizeY
-alias rightless     move screenOriginX+screenSizeX*0.6;screenOriginY  screenSizeX*0.4;screenSizeY
-alias leftmost      move screenOriginX;screenOriginY                  screenSizeX*0.6;screenSizeY
-alias leftless      move screenOriginX;screenOriginY                  screenSizeX*0.4;screenSizeY
+alias full            move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+
+alias tophalf         move screenOriginX;screenOriginY                  screenSizeX;screenSizeY/2
+alias toptwothirds    move screenOriginX;screenOriginY                  screenSizeX;screenSizeY*0.66
+alias toponethird     move screenOriginX;screenOriginY                  screenSizeX;screenSizeY*0.33
+alias righthalf       move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+alias righttwothirds  move screenOriginX+screenSizeX*0.33;screenOriginY screenSizeX*0.66;screenSizeY
+alias rightonethird   move screenOriginX+screenSizeX*0.66;screenOriginY screenSizeX*0.33;screenSizeY
+alias bottomhalf      move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX;screenSizeY/2
+alias bottomtwothirds move screenOriginX;screenOriginY+screenSizeY*0.33 screenSizeX;screenSizeY*0.66
+alias bottomonethird  move screenOriginX;screenOriginY+screenSizeY*0.66 screenSizeX;screenSizeY*0.33
+alias lefthalf        move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
+alias lefttwothirds   move screenOriginX;screenOriginY                  screenSizeX*0.66;screenSizeY
+alias leftonethird    move screenOriginX;screenOriginY                  screenSizeX*0.33;screenSizeY
 
 bind f:${prefix} ${full}
 
 bind esc:${prefix} relaunch
 
-bind left:${prefix} ${lefthalf}
-bind right:${prefix} ${righthalf}
-bind up:${prefix} ${tophalf}
-bind down:${prefix} ${bottomhalf}
+bind left:${prefix} chain ${lefthalf} | ${lefttwothirds} | ${leftonethird}
+bind right:${prefix} chain ${righthalf} | ${righttwothirds} | ${rightonethird}
+bind up:${prefix} chain ${tophalf} | ${toptwothirds} | ${toponethird}
+bind down:${prefix} chain ${bottomhalf} | ${bottomtwothirds} | ${bottomonethird}
+
+bind left:${shift-prefix} resize -10% +0
+bind right:${shift-prefix} resize +10% +0
+bind up:${shift-prefix} resize +0 -10%
+bind down:${shift-prefix} resize +0 +10%
 
 bind h:${prefix} focus left
 bind j:${prefix} focus down
@@ -38,4 +47,4 @@ bind b:${prefix} focus behind
 
 bind space:${prefix} focus 'Slack'
 
-bind tab:${prefix} hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
+bind tab:ctrl hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
