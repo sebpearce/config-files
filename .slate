@@ -1,0 +1,41 @@
+# Useful examples
+https://github.com/dmac/dotfiles/blob/master/.slate
+http://thume.ca/howto/2012/11/19/using-slate/
+
+config defaultToCurrentScreen true
+
+# Prefix for all commands
+alias prefix ctrl;cmd
+
+# Screens
+alias laptop    0
+alias bigscreen 1
+
+alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
+alias tophalf       move screenOriginX;screenOriginY                  screenSizeX;screenSizeY/2
+alias bottomhalf    move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX;screenSizeY/2
+alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+alias rightmost     move screenOriginX+screenSizeX*0.4;screenOriginY  screenSizeX*0.6;screenSizeY
+alias rightless     move screenOriginX+screenSizeX*0.6;screenOriginY  screenSizeX*0.4;screenSizeY
+alias leftmost      move screenOriginX;screenOriginY                  screenSizeX*0.6;screenSizeY
+alias leftless      move screenOriginX;screenOriginY                  screenSizeX*0.4;screenSizeY
+
+bind f:${prefix} ${full}
+
+bind esc:${prefix} relaunch
+
+bind left:${prefix} ${lefthalf}
+bind right:${prefix} ${righthalf}
+bind up:${prefix} ${tophalf}
+bind down:${prefix} ${bottomhalf}
+
+bind h:${prefix} focus left
+bind j:${prefix} focus down
+bind k:${prefix} focus up
+bind l:${prefix} focus right
+bind b:${prefix} focus behind
+
+bind space:${prefix} focus 'Slack'
+
+bind tab:${prefix} hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
