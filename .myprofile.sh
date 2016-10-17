@@ -21,6 +21,7 @@ BASE16_SHELL="$HOME/config-files/base16-seb.dark.sh"
 # Misc aliases
 
 alias lah='ls -lah'
+alias tmux_setup='~/config-files/tmux_setup.sh'
 
 # Rails
 
