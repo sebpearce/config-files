@@ -114,10 +114,10 @@ nnoremap <Leader>q :bd<CR>
 nnoremap <Leader>x :x!<CR>
 nnoremap <Leader>p :CtrlPMixed<CR>
 nnoremap <Leader>e :Explore<CR>
-nnoremap <Leader>n :NERDTreeToggle<CR>
+" nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " Combine with F1 mapped to fg in terminal to toggle
-map <F1> <C-z>
+" map <F1> <C-z>
 
 " Tabs
 nmap <S-Left> gT

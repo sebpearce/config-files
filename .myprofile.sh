@@ -43,17 +43,17 @@ function findstring() {
 
 # Bind F1 to fg for toggling between Vim and CL
 # (requires zsh)
-bind-F1-to-fg () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line
-  else
-    zle push-input
-    zle clear-screen
-  fi
-}
-zle -N bind-F1-to-fg
-bindkey '^[OP' bind-F1-to-fg           # ^[OP = F1
+# bind-F1-to-fg () {
+#   if [[ $#BUFFER -eq 0 ]]; then
+#     BUFFER="fg"
+#     zle accept-line
+#   else
+#     zle push-input
+#     zle clear-screen
+#   fi
+# }
+# zle -N bind-F1-to-fg
+# bindkey '^[OP' bind-F1-to-fg           # ^[OP = F1
 
 # Append a new tip to tips.txt on the desktop
 tip () {
