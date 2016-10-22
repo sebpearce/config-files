@@ -10,7 +10,7 @@ set tabstop=2
 set expandtab
 set clipboard=unnamed
 set number
-set relativenumber
+set norelativenumber
 set numberwidth=4
 set noswapfile
 set t_Co=256
@@ -48,6 +48,8 @@ let g:polyglot_disabled = ['elm']
 " Ignore mappings in elmcast/elm-vim plugin
 let g:elm_setup_keybindings = 0
 
+" Show line numbers in netrw
+let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 " Hide .DS_Store in netrw
 let g:netrw_list_hide = '.DS_Store'
 " Hide netrw banner
@@ -67,9 +69,6 @@ set splitright
 " Use \\ to insert line above and move to it while in insert mode
 imap \\ <Esc>ko
 
-" Easier than <S-;>
-nnoremap , :
-
 " Leader mappings
 "================
 map <Space> <Leader>
@@ -82,8 +81,8 @@ nnoremap <Leader>f :FZF<CR>
 " copy current filename to system clipboard
 noremap <Leader>% :let @+=expand("%:p")<CR>
 noremap <Leader>T :tabe<CR>
-noremap <Leader>H :gT<CR>
-noremap <Leader>L :gt<CR>
+noremap <Leader>H gT<CR>
+noremap <Leader>L gt<CR>
 " append semicolon to end of line
 noremap <Leader>; <Esc>g_a;<Esc>
 " RSpec.vim mappings
@@ -97,3 +96,8 @@ vmap <Leader>d y'>p
 " Combine with F1 mapped to fg in terminal to toggle
 " map <F1> <C-z>
 
+" HARD MODE! >:)
+nmap h <NOP>
+nmap j <NOP>
+nmap k <NOP>
+nmap l <NOP>
