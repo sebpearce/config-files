@@ -43,11 +43,15 @@ call plug#end()"
 filetype off
 filetype plugin indent on    " required
 
+" Use 4 spaces for Elm files
+autocmd Filetype elm setlocal ts=4 sts=4 sw=4
+
 " Ignore elm in polyglot plugin
 let g:polyglot_disabled = ['elm']
 
 " Ignore mappings in elmcast/elm-vim plugin
 let g:elm_setup_keybindings = 0
+let g:elm_format_autosave = 1
 
 " Show line numbers in netrw
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
