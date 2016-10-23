@@ -98,7 +98,7 @@ vmap <Leader>d y'>p
 " map <F1> <C-z>
 
 " HARD MODE! >:)
-nmap h <NOP>
-nmap j <NOP>
-nmap k <NOP>
-nmap l <NOP>
+" nmap h <NOP>
+" nmap j <NOP>
+" nmap k <NOP>
+" nmap l <NOP>
