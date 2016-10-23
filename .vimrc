@@ -22,6 +22,7 @@ set backspace=indent,eol,start
 set timeoutlen=1000 ttimeoutlen=0 " Fix lag when ESC key is pressed to exit insert mode
 set cursorline
 set ignorecase
+set hlsearch
 hi LineNr ctermbg=black
 hi CursorLine ctermbg=233
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
@@ -58,6 +59,9 @@ let g:netrw_banner = 0
 " Use bundle exec for vim-rspec
 let g:rspec_command = "!bundle exec rspec {spec}"
 
+" Use <C-l> to clear search
+nnoremap <silent> <Bslash> :nohlsearch<CR>
+
 " Better splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -65,9 +69,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
-
-" Use \\ to insert line above and move to it while in insert mode
-imap \\ <Esc>ko
 
 " Leader mappings
 "================
