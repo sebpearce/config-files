@@ -28,6 +28,7 @@ hi CursorLine ctermbg=233
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 " Include hyphens as part of word objects
 set iskeyword+=-
+set incsearch
 
 call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
