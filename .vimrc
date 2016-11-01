@@ -94,11 +94,11 @@ noremap <Leader>% :let @+=expand("%:p")<CR>
 noremap <Leader>T :tabe<CR>
 noremap <Leader>H gT<CR>
 noremap <Leader>L gt<CR>
-noremap <Leader>1 1gt<CR>
-noremap <Leader>2 2gt<CR>
-noremap <Leader>3 3gt<CR>
-noremap <Leader>4 4gt<CR>
-noremap <Leader>5 5gt<CR>
+noremap <Leader>1 1gt
+noremap <Leader>2 2gt
+noremap <Leader>3 3gt
+noremap <Leader>4 4gt
+noremap <Leader>5 5gt
 " append semicolon to end of line
 noremap <Leader>; <Esc>g_a;<Esc>
 
