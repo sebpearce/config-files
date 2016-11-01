@@ -40,11 +40,16 @@ Plug 'vim-scripts/tComment'
 Plug 'tmhedberg/matchit'
 Plug 'elmcast/elm-vim'
 Plug 'thoughtbot/vim-rspec'
+Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 call plug#end()"
 
 filetype off
 filetype plugin indent on    " required
+
+" tslime config
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
 
 " Use 4 spaces for Elm files
 autocmd Filetype elm setlocal ts=4 sts=4 sw=4
@@ -62,9 +67,6 @@ let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 let g:netrw_list_hide = '.DS_Store'
 " Hide netrw banner
 let g:netrw_banner = 0
-
-" Use bundle exec for vim-rspec
-let g:rspec_command = "!bundle exec rspec {spec}"
 
 " Use <C-l> to clear search
 nnoremap <silent> <Bslash> :nohlsearch<CR>
@@ -86,18 +88,28 @@ nnoremap <Leader>x :x!<CR>
 nnoremap <Leader>p :CtrlPMixed<CR>
 nnoremap <Leader>e :Explore<CR>
 nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>y ^y$
 " copy current filename to system clipboard
 noremap <Leader>% :let @+=expand("%:p")<CR>
 noremap <Leader>T :tabe<CR>
 noremap <Leader>H gT<CR>
 noremap <Leader>L gt<CR>
+noremap <Leader>1 1gt<CR>
+noremap <Leader>2 2gt<CR>
+noremap <Leader>3 3gt<CR>
+noremap <Leader>4 4gt<CR>
+noremap <Leader>5 5gt<CR>
 " append semicolon to end of line
 noremap <Leader>; <Esc>g_a;<Esc>
+
 " RSpec.vim mappings
 map <Leader>t :w <bar> :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>s :w <bar> :call RunNearestSpec()<CR>
+map <Leader>l :w <bar> :call RunLastSpec()<CR>
+map <Leader>a :w <bar> :call RunAllSpecs()<CR>
+" Use bundle exec for vim-rspec
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+
 " duplicate selection
 vmap <Leader>d y'>p
 
