@@ -89,6 +89,7 @@ nnoremap <Leader>p :CtrlPMixed<CR>
 nnoremap <Leader>e :Explore<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>y ^y$
+nnoremap <Leader>v ^vg_
 nnoremap H ^
 nnoremap L g_
 vmap H ^
