@@ -89,7 +89,8 @@ nnoremap <Leader>p :CtrlPMixed<CR>
 nnoremap <Leader>e :Explore<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>y ^y$
-nnoremap <Leader>a ^
+nnoremap H ^
+nnoremap L g_
 " copy current filename to system clipboard
 noremap <Leader>% :let @+=expand("%:p")<CR>
 noremap <Leader>T :tabe<CR>
