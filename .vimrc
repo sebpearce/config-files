@@ -89,6 +89,7 @@ nnoremap <Leader>p :CtrlPMixed<CR>
 nnoremap <Leader>e :Explore<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>y ^y$
+nnoremap <Leader>a ^
 " copy current filename to system clipboard
 noremap <Leader>% :let @+=expand("%:p")<CR>
 noremap <Leader>T :tabe<CR>
@@ -106,7 +107,7 @@ noremap <Leader>; <Esc>g_a;<Esc>
 map <Leader>t :w <bar> :call RunCurrentSpecFile()<CR>
 map <Leader>s :w <bar> :call RunNearestSpec()<CR>
 map <Leader>l :w <bar> :call RunLastSpec()<CR>
-map <Leader>a :w <bar> :call RunAllSpecs()<CR>
+" map <Leader>a :w <bar> :call RunAllSpecs()<CR>
 " Use bundle exec for vim-rspec
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 
