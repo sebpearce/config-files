@@ -91,6 +91,8 @@ nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>y ^y$
 nnoremap H ^
 nnoremap L g_
+vmap H ^
+vmap L g_
 " copy current filename to system clipboard
 noremap <Leader>% :let @+=expand("%:p")<CR>
 noremap <Leader>T :tabe<CR>
