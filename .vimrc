@@ -41,6 +41,7 @@ Plug 'tmhedberg/matchit'
 Plug 'elmcast/elm-vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'jgdavey/tslime.vim'
+Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 call plug#end()"
 
