@@ -20,7 +20,7 @@ set background=dark
 set laststatus=2
 set backspace=indent,eol,start
 set timeoutlen=1000 ttimeoutlen=0 " Fix lag when ESC key is pressed to exit insert mode
-set cursorline
+set nocursorline
 set ignorecase
 set hlsearch
 hi LineNr ctermbg=black
