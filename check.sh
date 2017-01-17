@@ -4,5 +4,5 @@
 #   usage;
 # fi
 
-node_modules/.bin/eslint $1 npm test -- $1
+node_modules/.bin/eslint $1 && npm test -- $1
 
