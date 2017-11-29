@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
+colorscheme material-theme
 set visualbell
 set history=10000
 set mouse=a
@@ -13,9 +14,8 @@ set number
 set norelativenumber
 set numberwidth=4
 set noswapfile
-set t_Co=256
-let base16colorspace=256
-colorscheme base16-default
+" set t_Co=256
+set termguicolors
 set background=dark
 set laststatus=2
 set backspace=indent,eol,start
@@ -32,7 +32,6 @@ set incsearch
 
 call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
-Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-surround'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'auto-pairs-gentle'
@@ -42,6 +41,7 @@ Plug 'elmcast/elm-vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'tpope/vim-fugitive'
 call plug#end()"
 
 filetype off
@@ -67,15 +67,22 @@ let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 let g:netrw_list_hide = '.DS_Store'
 " Hide netrw banner
 let g:netrw_banner = 0
+" Open in vertical split
+" let g:netrw_browse_split = 2
+" Use tree view
+let g:netrw_liststyle = 0
 
 " Use <C-l> to clear search
 nnoremap <silent> <Bslash> :nohlsearch<CR>
 
+nnoremap j gj
+nnoremap k gk
+
 " Better splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
 set splitbelow
 set splitright
 
@@ -83,10 +90,10 @@ set splitright
 "================
 map <Space> <Leader>
 nnoremap <Leader>w :w!<CR>
-nnoremap <Leader>q :q<CR>
+nnoremap <Leader>q :bw<CR>
 nnoremap <Leader>x :x!<CR>
 nnoremap <Leader>p :CtrlPMixed<CR>
-nnoremap <Leader>e :Explore<CR>
+nnoremap <Leader>e :Vexplore<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>y ^y$
 nnoremap <Leader>v ^vg_
@@ -125,4 +132,12 @@ vmap <Leader>d y'>p
 " nmap h <NOP>
 " nmap j <NOP>
 " nmap k <NOP>
-" nmap l <NOP>
+
+" Override netrw <C-l> mapping because I use it to switch windows
+augroup netrw_mappings
+    autocmd!
+    autocmd filetype netrw call Netrw_mappings()
+augroup END
+function! Netrw_mappings()
+    nnoremap <buffer> <C-l> <C-w>l
+endfunction
