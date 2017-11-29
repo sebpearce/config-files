@@ -45,14 +45,13 @@ bind k:${prefix} focus up
 bind l:${prefix} focus right
 bind b:${prefix} focus behind
 
-bind t:${prefix} focus 'iTerm2'
-bind c:${prefix} focus 'Calendar'
-bind f2 focus 'iTerm2'
-bind f3 focus 'Google Chrome'
-bind f4 focus 'Safari'
-bind f5 focus 'Calendar'
 bind f1 focus 'Slack'
-bind f12 focus 'Slack'
-bind f15 focus 'Slack'
+bind f2 focus 'Atom'
+bind f3 focus 'Google Chrome'
+bind f4 focus 'Trello'
+bind f5 focus 'Calendar'
+bind f6 focus 'Sketch'
+bind f12 focus 'iTerm2'
+bind f15 focus 'Safari'
 
 bind tab:ctrl hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
