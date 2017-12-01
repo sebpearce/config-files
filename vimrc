@@ -45,7 +45,7 @@ call plug#end()"
 filetype off
 filetype plugin indent on    " required for ultisnips
 
-" ultisinps trigger configuration.
+" ultisnips trigger configuration.
 " do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
