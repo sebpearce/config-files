@@ -1,22 +1,4 @@
-# Base16 Shell
-BASE16_SHELL="$HOME/config-files/base16-seb.dark.sh"
-[[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
-
 # Git
-
-# Copy to .gitconfig [alias]
-	# co = checkout
-	# b = branch
-	# ci = commit
-	# di = diff
-	# dc = diff
-	# amend = commit
-	# aa = add
-	# ff = merge
-	# pullff = pull
-	# fa = fetch
-	# log = log
-	# s = status
 
 # Misc aliases
 

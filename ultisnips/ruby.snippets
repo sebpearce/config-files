@@ -1,0 +1,58 @@
+snippet def
+def $1
+  $0
+end
+endsnippet
+
+snippet module
+module $1
+  $0
+end
+endsnippet
+
+snippet class
+class $1
+  $0
+end
+endsnippet
+
+# rspec snippets
+# ==============
+
+snippet desc
+describe '$1' do
+  $0
+end
+endsnippet
+
+snippet cont
+context '$1' do
+  $0
+end
+endsnippet
+
+snippet it
+it '$1' do
+  $0
+end
+endsnippet
+
+snippet exp
+expect(${1:object}).to $0
+endsnippet
+
+snippet subj
+subject { $1 }$0
+endsnippet
+
+snippet let
+let(:${1:object}) do
+  $0
+end
+endsnippet
+
+snippet before
+before do
+  $0
+end
+endsnippet
