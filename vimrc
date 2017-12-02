@@ -1,6 +1,6 @@
 set nocompatible " be iMproved, required
 syntax on
-colorscheme material-theme
+colorscheme material-blackbg
 set visualbell
 set history=10000
 set mouse=a
@@ -138,8 +138,6 @@ let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 
 " Misc
 " ====
-
-:command WipeAll 1,$bdel
 
 " strip all whitespace on save
 fun! <SID>StripTrailingWhitespaces()
