@@ -1,6 +1,8 @@
 set nocompatible " be iMproved, required
 syntax on
-colorscheme material-blackbg
+set background=dark
+colorscheme fu
+highlight Normal guibg=black
 set visualbell
 set history=10000
 set mouse=a
@@ -14,7 +16,6 @@ set norelativenumber
 set numberwidth=4
 set noswapfile
 set termguicolors
-set background=dark
 set laststatus=2
 set backspace=indent,eol,start
 set nocursorline
@@ -38,12 +39,17 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'jgdavey/tslime.vim'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
+Plug 'mileszs/ack.vim'
 call plug#end()"
 
 filetype off
 filetype plugin indent on    " required for ultisnips
+
+" use rg with ack.vim
+let g:ackprg = 'rg --vimgrep --no-heading'
 
 " ultisnips trigger configuration.
 " do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
