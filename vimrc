@@ -1,8 +1,8 @@
 set nocompatible " be iMproved, required
 syntax on
 set background=dark
-colorscheme fu
-highlight Normal guibg=black
+colorscheme organism
+" highlight Normal guibg=black
 set visualbell
 set history=10000
 set mouse=a
@@ -24,6 +24,9 @@ set hlsearch
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 set iskeyword+=- " Include hyphens as part of word objects
 set incsearch
+set wrap
+set linebreak
+set display+=lastline
 
 " Plugins
 " =======
@@ -43,10 +46,20 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
 Plug 'mileszs/ack.vim'
+Plug 'chrisbra/colorizer.vim'
 call plug#end()"
 
 filetype off
 filetype plugin indent on    " required for ultisnips
+
+" show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 " use rg with ack.vim
 let g:ackprg = 'rg --vimgrep --no-heading'
@@ -74,7 +87,7 @@ let g:netrw_banner = 0
 " open in vertical split
 " let g:netrw_browse_split = 2
 " use tree view
-let g:netrw_liststyle = 0
+let g:netrw_liststyle = 3
 
 
 " File-specific
@@ -99,6 +112,7 @@ nnoremap k gk
 
 " use \\ to clear search
 nnoremap <silent> <Bslash> :nohlsearch<CR>
+nnoremap <esc> :nohlsearch<CR>
 
 " splits
 nnoremap <C-j> <C-w><C-j>
@@ -141,9 +155,15 @@ map <Leader>l :w <bar> :call RunLastSpec()<CR>
 " use bundle exec for vim-rspec
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 
+" tComment mapping
+map <D-/> :TComment<CR>
+
 
 " Misc
 " ====
+
+" go to GTD folder
+command! GTD :cd ~/GTD
 
 " strip all whitespace on save
 fun! <SID>StripTrailingWhitespaces()
