@@ -86,8 +86,7 @@ let g:netrw_list_hide = '.DS_Store'
 let g:netrw_banner = 0
 " open in vertical split
 " let g:netrw_browse_split = 2
-" use tree view
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 0
 
 
 " File-specific
@@ -163,7 +162,8 @@ map <D-/> :TComment<CR>
 " ====
 
 " go to GTD folder
-command! GTD :cd ~/GTD
+command! GTD :Explore ~/GTD
+command! Cycad :Explore ~/code/projects/cycad
 
 " strip all whitespace on save
 fun! <SID>StripTrailingWhitespaces()

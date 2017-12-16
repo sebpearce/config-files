@@ -60,6 +60,13 @@ hi SpecialComment guifg=#FFE57F guibg=NONE gui=NONE
 hi Todo guifg=#FF74ED guibg=NONE gui=NONE
 hi Comment guifg=#61707F guibg=NONE gui=NONE
 
+" git
+hi link diffAdded String
+hi link diffRemoved Boolean
+hi link diffLine SpecialComment
+hi link gitcommitDiff Comment
+hi link diffSubname Comment
+
 
 " ruby
 hi link rubyFunction Function
@@ -108,7 +115,7 @@ hi vimHiGuiRgb guifg=#8CFEFF guibg=NONE
 hi vimHiGui guifg=NONE guibg=NONE
 hi vimFgBgAttrib guifg=NONE guibg=NONE
 hi vimHiAttrib guifg=NONE guibg=NONE
-hi vimFuncName guifg=#EDDA7F guibg=NONE gui=NONE
+hi link vimFuncName Function
 hi vimCommand guifg=#9597FF guibg=NONE gui=NONE
 
 " netrw
