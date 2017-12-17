@@ -30,8 +30,8 @@ hi Title guifg=#EEFFF9
 
 " constant group
 hi Constant guifg=NONE guibg=NONE gui=NONE
-hi String guifg=#7CD692 guibg=NONE gui=NONE
-hi Character guifg=#7CD692 guibg=NONE gui=NONE
+hi String guifg=#77B46F guibg=NONE gui=NONE
+hi Character guifg=#77B46F guibg=NONE gui=NONE
 hi Number guifg=#EB8649 guibg=NONE gui=NONE
 hi Boolean guifg=#F47A7A guibg=NONE gui=NONE
 
@@ -43,7 +43,7 @@ hi Function guifg=#4E9DEC guibg=NONE gui=NONE
 hi PreProc guifg=#C792E4 guibg=NONE gui=NONE
 
 " type group
-hi Type guifg=#91E6FE guibg=NONE gui=NONE
+hi Type guifg=#A6FDF1 guibg=NONE gui=NONE
 
 " statement group
 hi Statement guifg=#F47A7A guibg=NONE gui=NONE
@@ -89,7 +89,7 @@ hi link rubyRegexpDelimiter Operator
 hi link rubyClassVariable SpecialComment
 hi link rubyGlobalVariable SpecialComment
 hi link rubyException Exception
-hi link rubyStringDelimiter Operator
+hi link rubyStringDelimiter String
 hi link rubyConditionalExpression Normal
 hi link rubyInterpolationDelimiter Operator
 hi link rubyInterpolation Operator
@@ -100,7 +100,9 @@ hi link rubyBlockParameter Statement
 " hi rubyEscape guifg=#bd93f9 guibg=NONE gui=NONE
 
 " rspec
-hi link rspecGroupMethods Type
+hi link rspecGroupMethods Operator
+hi link rspecMatchers Operator
+hi link rspecBeforeAndAfter Operator
 
 " vimscript
 hi vimGroupName guifg=#9DFFB7 guibg=NONE
@@ -132,3 +134,6 @@ hi link htmlH6 htmlH1
 hi mkdNonListItemBlock guifg=#8397AA
 hi link mkdListItem SpecialComment
 hi mkdInlineURL guifg=#9597FF guibg=NONE gui=NONE
+
+" ultisnips
+hi link snipLeadingSpaces Normal
