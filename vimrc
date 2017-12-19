@@ -82,7 +82,6 @@ nnoremap k gk
 
 " use \\ to clear search
 nnoremap <silent> <Bslash> :nohlsearch<CR>
-nnoremap <esc> :nohlsearch<CR>
 
 " splits
 nnoremap <C-j> <C-w><C-j>
