@@ -1,8 +1,9 @@
-set nocompatible " be iMproved, required
+" Plugins are loaded in ~/.vimrc and ~/.config/nvim/init.vim separately.
+" Both those files then source this one.
+
 syntax on
 set background=dark
 colorscheme organism
-" highlight Normal guibg=black
 set visualbell
 set history=10000
 set mouse=a
@@ -28,26 +29,6 @@ set wrap
 set linebreak
 set display+=lastline
 
-" Plugins
-" =======
-
-call plug#begin('~/.vim/plugged')
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
-Plug 'vim-scripts/tComment'
-Plug 'tmhedberg/matchit'
-Plug 'elmcast/elm-vim'
-Plug 'thoughtbot/vim-rspec'
-Plug 'jgdavey/tslime.vim'
-Plug 'mattn/emmet-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'SirVer/ultisnips'
-Plug 'mileszs/ack.vim'
-Plug 'chrisbra/colorizer.vim'
-call plug#end()"
 
 filetype off
 filetype plugin indent on    " required for ultisnips
@@ -63,16 +44,6 @@ endfunc
 
 " use rg with ack.vim
 let g:ackprg = 'rg --vimgrep --no-heading'
-
-" ultisnips trigger configuration.
-" do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-" if you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
-let g:UltiSnipsSnippetDirectories=["ultisnips"]
 
 " tslime config
 let g:tslime_always_current_session = 1

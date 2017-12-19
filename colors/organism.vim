@@ -7,16 +7,16 @@ endif
 
 let g:colors_name = "organism"
 
-hi Normal guifg=#f9f9f9 guibg=#000000  gui=NONE
+hi Normal guifg=#EEF9EF guibg=#000000  gui=NONE
 hi Cursor guifg=#000000 guibg=#ffffff gui=NONE
 hi Visual guifg=#000000 guibg=#8BC5FF gui=NONE
-hi LineNr guifg=#61707F guibg=NONE gui=NONE
+hi LineNr guifg=#6B8787 guibg=NONE gui=NONE
 hi CursorLine guifg=NONE guibg=#121519 gui=NONE
 hi CursorLineNr guifg=#9EB6CD guibg=NONE gui=NONE
 hi ColorColumn guifg=NONE guibg=#121519 gui=NONE
 hi CursorColumn guifg=NONE guibg=#121519 gui=NONE
-hi Search guifg=#000000 guibg=#7DDE92 gui=NONE
-hi IncSearch guifg=#000000 guibg=#7DDE92 gui=NONE
+hi Search guifg=#000000 guibg=#FFE200 gui=NONE
+hi IncSearch guifg=#000000 guibg=#FFE200 gui=NONE
 hi MatchParen guifg=#C792E4 guibg=NONE gui=underline
 hi Folded guifg=#61707F guibg=#121519 gui=NONE
 hi VertSplit guifg=#121519 guibg=#121519 gui=NONE
@@ -30,10 +30,10 @@ hi Title guifg=#EEFFF9
 
 " constant group
 hi Constant guifg=NONE guibg=NONE gui=NONE
-hi String guifg=#77B46F guibg=NONE gui=NONE
+hi String guifg=#22D689 guibg=NONE gui=NONE
 hi Character guifg=#77B46F guibg=NONE gui=NONE
 hi Number guifg=#EB8649 guibg=NONE gui=NONE
-hi Boolean guifg=#F47A7A guibg=NONE gui=NONE
+hi Boolean guifg=#FF5C43 guibg=NONE gui=NONE
 
 " identifier group
 hi Identifier guifg=#4E9DEC guibg=NONE gui=NONE
@@ -43,10 +43,10 @@ hi Function guifg=#4E9DEC guibg=NONE gui=NONE
 hi PreProc guifg=#C792E4 guibg=NONE gui=NONE
 
 " type group
-hi Type guifg=#A6FDF1 guibg=NONE gui=NONE
+hi Type guifg=#5fffff guibg=NONE gui=NONE
 
 " statement group
-hi Statement guifg=#F47A7A guibg=NONE gui=NONE
+hi Statement guifg=#FF5C43 guibg=NONE gui=NONE
 hi Conditional guifg=#C792E4 guibg=NONE gui=NONE
 hi Repeat guifg=#C792E4 guibg=NONE gui=NONE
 hi Label guifg=#C792E4 guibg=NONE gui=NONE
@@ -58,7 +58,8 @@ hi SpecialComment guifg=#FFE57F guibg=NONE gui=NONE
 
 " others
 hi Todo guifg=#FF74ED guibg=NONE gui=NONE
-hi Comment guifg=#61707F guibg=NONE gui=NONE
+hi Comment guifg=#6B8787 guibg=NONE gui=NONE
+hi link Exception Boolean
 
 " git
 hi link diffAdded String
@@ -67,10 +68,16 @@ hi link diffLine SpecialComment
 hi link gitcommitDiff Comment
 hi link diffSubname Comment
 
+" css
+" hi link scssDefinition PreProc
+" hi link scssProperty PreProc
+" hi link scssSelectorName Function
+
+" haml
+hi link hamlClass Boolean
 
 " ruby
 hi link rubyFunction Function
-hi link rubyBlockParameter Statement
 hi link rubyClass PreProc
 hi link rubyModule PreProc
 hi link rubyDefine PreProc
