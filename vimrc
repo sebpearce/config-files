@@ -22,7 +22,7 @@ set backspace=indent,eol,start
 set nocursorline
 set ignorecase
 set hlsearch
-set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l:%02c%03V%)
 set iskeyword+=- " Include hyphens as part of word objects
 set incsearch
 set wrap
@@ -127,6 +127,8 @@ let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 " tComment mapping
 map <D-/> :TComment<CR>
 
+" Open current split in new tab for zoomed-in temp editing
+noremap tt :tab split<CR>
 
 " Misc
 " ====
