@@ -48,7 +48,7 @@ bind l:${prefix} focus right
 bind b:${prefix} focus behind
 
 bind f1 focus 'Slack'
-bind f2 focus 'MacVim'
+bind f2 focus 'iTerm2'
 bind f3 focus 'Google Chrome'
 bind f4 focus 'Trello'
 bind f5 focus 'Calendar'
