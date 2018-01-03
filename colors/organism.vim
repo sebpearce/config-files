@@ -72,6 +72,7 @@ hi link diffSubname Comment
 " hi link scssDefinition PreProc
 " hi link scssProperty PreProc
 " hi link scssSelectorName Function
+hi link cssProp SpecialComment
 
 " haml
 hi link hamlClass Boolean
