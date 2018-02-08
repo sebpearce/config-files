@@ -1,0 +1,26 @@
+snippet ii
+import Icon.Icon as Icon
+import Icon.SvgAsset exposing (svgAsset)
+import Html.Extra exposing (static)
+endsnippet
+
+snippet cap
+Icon.view Icon.presentation (svgAsset "cultureamp-style-guide/icons/$1.svg") "${0:$1}-icon" |> static
+endsnippet
+
+snippet cai
+Icon.view (Icon.img "${1:ARIA-title}") (svgAsset "cultureamp-style-guide/icons/$2.svg") "${0:$2}-icon" |> static
+endsnippet
+
+snippet capis
+Icon.view (Icon.presentation |> Icon.inheritSize) (svgAsset "cultureamp-style-guide/icons/$1.svg") "${0:$1}-icon" |> static
+endsnippet
+
+snippet caiis
+Icon.view (Icon.img "${1:ARIA-title}" |> Icon.inheritSize) (svgAsset "cultureamp-style-guide/icons/$2.svg") "${0:$2}-icon" |> static
+endsnippet
+
+snippet is
+|> Icon.inheritSize
+endsnippet
+
