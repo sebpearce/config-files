@@ -16,10 +16,34 @@ module $1
 end
 endsnippet
 
+snippet module
+module $1
+  $0
+end
+endsnippet
+
+snippet cla
+class $1
+  $0
+end
+endsnippet
+
 snippet class
 class $1
   $0
 end
+endsnippet
+
+snippet pri
+private
+
+$0
+endsnippet
+
+snippet private
+private
+
+$0
 endsnippet
 
 
@@ -32,7 +56,19 @@ describe '$1' do
 end
 endsnippet
 
+snippet describe
+describe '$1' do
+  $0
+end
+endsnippet
+
 snippet con
+context '$1' do
+  $0
+end
+endsnippet
+
+snippet context
 context '$1' do
   $0
 end
@@ -48,7 +84,15 @@ snippet exp
 expect(${1:object}).to $0
 endsnippet
 
+snippet expect
+expect(${1:object}).to $0
+endsnippet
+
 snippet sub
+subject { $1 }$0
+endsnippet
+
+snippet subject
 subject { $1 }$0
 endsnippet
 
@@ -59,6 +103,12 @@ end
 endsnippet
 
 snippet bef
+before do
+  $0
+end
+endsnippet
+
+snippet before
 before do
   $0
 end
