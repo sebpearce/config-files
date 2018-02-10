@@ -11,6 +11,7 @@ alias r='bin/rails'
 alias rs='bin/rails server'
 alias rc='bin/rails console'
 alias rt='bin/rails test'
+alias please='git push --set-upstream origin $(git branch-name)'
 
 function findstring() {
   if [ $# -eq 0 ]; then

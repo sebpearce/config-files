@@ -67,7 +67,7 @@ let g:netrw_liststyle = 0
 autocmd Filetype elm setlocal ts=4 sts=4 sw=4
 
 " ignore elm in polyglot plugin
-let g:polyglot_disabled = ['elm']
+" let g:polyglot_disabled = ['elm']
 
 " ignore mappings in elmcast/elm-vim plugin
 let g:elm_setup_keybindings = 0
