@@ -115,6 +115,7 @@ noremap <Leader>4 4gt
 noremap <Leader>5 5gt
 " append semicolon to end of line
 noremap <Leader>; <Esc>g_a;<Esc>
+noremap <Leader>b :Buffers<CR>
 
 " rspec.vim mappings
 map <Leader>t :w <bar> :call RunCurrentSpecFile()<CR>
