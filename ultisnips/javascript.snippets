@@ -25,3 +25,90 @@ endsnippet
 snippet div
 <div className={$1}>$0</div>
 endsnippet
+
+snippet rcc
+import React from 'react';
+
+export default class ${1:ComponentName} extends React.Component {
+	constructor(props) {
+    super(props);
+    this.state = {$2};
+  }
+
+	render() {
+		return (
+			<div className={$3}>
+				$0
+			</div>
+		);
+	}
+}
+endsnippet
+
+snippet rfc
+import React from 'react';
+
+export default function ${1:ComponentName}(props) {
+	return (
+		<div className={$2}>
+			$0
+    </div>
+	);
+}
+endsnippet
+
+snippet fc
+const ${1:ComponentName} = ($2) => {
+	return (
+		$0
+	);
+}
+endsnippet
+
+snippet cn
+className={${1:styles.foo}}
+endsnippet
+
+
+# styled components
+# =================
+
+snippet st
+const $1 = styled.$2\`
+	$0
+\`;
+endsnippet
+
+snippet strcc
+import React from 'react';
+import styled from "styled-components";
+
+const $3 = styled.$4\`
+	$5
+\`;$0
+
+export default class ${1:ComponentName} extends React.Component {
+	constructor(props) {
+    super(props);
+    this.state = {$2};
+  }
+
+	render() {
+		return (
+			<$3>
+			</$3>
+		);
+	}
+}
+endsnippet
+
+snippet strfc
+import React from 'react';
+import styled from "styled-components";
+
+export default function ${1:ComponentName}(props) {
+	return (
+		$0
+	);
+}
+endsnippet
