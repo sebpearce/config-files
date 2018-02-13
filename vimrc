@@ -100,6 +100,8 @@ nnoremap <Leader>e :Explore<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>y ^y$
 nnoremap <Leader>v ^vg_
+nnoremap <Leader>rg :call Send_to_Tmux("rg '<C-R>0'\n")<CR>
+nnoremap <Leader>rf :call fzf#vim#tags(@0)<CR>
 nnoremap H ^
 nnoremap L g_
 vmap H ^
