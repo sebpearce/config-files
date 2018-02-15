@@ -100,10 +100,10 @@ nnoremap <Leader>e :Explore<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>y ^y$
 nnoremap <Leader>v ^vg_
-nnoremap H ^
-nnoremap L g_
-vmap H ^
-vmap L g_
+nnoremap H g^
+nnoremap L g$
+vmap H g^
+vmap L g$
 " duplicate selection
 vmap <Leader>d y'>p
 " copy current filename to system clipboard
@@ -123,7 +123,7 @@ map <Leader>s :w <bar> :call RunNearestSpec()<CR>
 map <Leader>l :w <bar> :call RunLastSpec()<CR>
 " map <Leader>a :w <bar> :call RunAllSpecs()<CR>
 " use bundle exec for vim-rspec
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+     let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 
 " tComment mapping
 map <D-/> :TComment<CR>
