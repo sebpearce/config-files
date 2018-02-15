@@ -111,7 +111,7 @@ noremap <Leader>% :let @+=expand("%:p")<CR>
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt
 noremap <Leader>3 3gt
-noremap <Leader>4 4gt
+noremap <leader>4 4gt
 noremap <Leader>5 5gt
 " append semicolon to end of line
 noremap <Leader>; <Esc>g_a;<Esc>
@@ -130,6 +130,37 @@ map <D-/> :TComment<CR>
 
 " Open current split in new tab for zoomed-in temp editing
 noremap tt :tab split<CR>
+
+" run rg on last-yanked item and pass to Tmux pane
+" nnoremap <Leader>rg :call Send_to_Tmux("rg '<C-R>0'\n")<CR>
+
+" open fzf with the last-yanked item as the query (find file)
+nnoremap <leader>rf
+  \ :call fzf#vim#files('.', fzf#vim#with_preview({'options': ['--query', @0]}))<cr>
+
+" create Find command which runs fzf with rg on arguments
+command! -bang -nargs=* Find
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" open fzf + rg with last-yanked item as query (find in files)
+nnoremap <Leader>rg :Find <C-R>0<CR>
+
+" Search for selected text, forwards or backwards.
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> # :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+
 
 " Misc
 " ====
