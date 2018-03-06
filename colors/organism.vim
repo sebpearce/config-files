@@ -7,7 +7,7 @@ endif
 
 let g:colors_name = "organism"
 
-hi Normal guifg=#EEF9EF guibg=#000000  gui=NONE
+hi Normal guifg=#A5CEDC guibg=#1B212B  gui=NONE
 hi Cursor guifg=#000000 guibg=#ffffff gui=NONE
 hi Visual guifg=#000000 guibg=#8BC5FF gui=NONE
 hi LineNr guifg=#6B8787 guibg=NONE gui=NONE
@@ -22,7 +22,7 @@ hi Folded guifg=#61707F guibg=#121519 gui=NONE
 hi VertSplit guifg=#121519 guibg=#121519 gui=NONE
 hi StatusLine guifg=#EEFFF9 guibg=#121519 gui=NONE
 hi StatusLineNC guifg=#EEFFF8 guibg=#121519 gui=NONE
-hi EndOfBuffer guifg=#61707F guibg=#000000 gui=NONE
+hi EndOfBuffer guifg=#61707F guibg=#1B212B gui=NONE
 hi TabLineFill  guifg=NONE guibg=#3A434B gui=none
 hi TabLine      guifg=#EEFFF9 guibg=#3A434B gui=none
 hi link TabLineSel Normal
@@ -30,7 +30,8 @@ hi Title guifg=#EEFFF9
 
 " constant group
 hi Constant guifg=NONE guibg=NONE gui=NONE
-hi String guifg=#22D689 guibg=NONE gui=NONE
+" hi String guifg=#22D689 guibg=NONE gui=NONE "old green
+hi String guifg=#75B56C guibg=NONE gui=NONE
 hi Character guifg=#77B46F guibg=NONE gui=NONE
 hi Number guifg=#EB8649 guibg=NONE gui=NONE
 hi Boolean guifg=#FF5C43 guibg=NONE gui=NONE

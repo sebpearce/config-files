@@ -2,6 +2,12 @@ snippet log
 console.log($1);$0
 endsnippet
 
+snippet fun
+function $1($2) {
+	$0
+}
+endsnippet
+
 snippet ii
 import Icon from 'cultureamp-style-guide/components/Icon/Icon';$0
 endsnippet
@@ -69,6 +75,25 @@ snippet cn
 className={${1:styles.foo}}
 endsnippet
 
+# jest tests
+# ==========
+snippet des
+describe('$1', () => {
+  $0
+});
+endsnippet
+
+snippet test
+test('$1', () => {
+  $0
+});
+endsnippet
+
+snippet it
+it('$1', () => {
+  $0
+});
+endsnippet
 
 # styled components
 # =================
