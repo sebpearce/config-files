@@ -27,6 +27,8 @@ hi TabLineFill  guifg=NONE guibg=#3A434B gui=none
 hi TabLine      guifg=#EEFFF9 guibg=#3A434B gui=none
 hi link TabLineSel Normal
 hi Title guifg=#EEFFF9
+hi Pmenu guifg=#8BAADE guibg=#26395A gui=none
+hi PmenuSel guifg=#FFFFFF guibg=#152033 gui=none
 
 " constant group
 hi Constant guifg=NONE guibg=NONE gui=NONE

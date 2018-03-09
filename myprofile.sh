@@ -4,6 +4,7 @@
 
 alias lah='ls -lah'
 alias tmux_setup='~/config-files/tmux_setup.sh'
+alias c='clear'
 
 # Rails
 
