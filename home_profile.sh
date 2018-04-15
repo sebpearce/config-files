@@ -22,12 +22,6 @@ fi
 
 export PATH=/usr/local/bin:~/code/in_sys_path:$PATH
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-export PS1="\w $  ️"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # aliases
 alias code='cd /Users/seb/code'
@@ -48,3 +42,6 @@ alias homeprofile='nvim ~/config-files/home_profile.sh'
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
